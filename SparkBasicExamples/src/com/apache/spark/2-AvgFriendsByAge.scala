@@ -11,7 +11,7 @@ object AvgFriendsByAge {
     
     val context = new SparkContext("local[*]","Average Friends By Age")
     
-    // Load data into RDD (ID, Name, Age, FriendsCount)
+    // Load data (ID, Name, Age, FriendsCount)
     val lines = context.textFile("../data/Friends.csv")
     
     val rdd = lines.map(parseLines)

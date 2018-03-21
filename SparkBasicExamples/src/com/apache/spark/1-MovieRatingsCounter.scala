@@ -12,7 +12,7 @@ object MovieRatingsCounter {
     // Using all available cores of local machine
     val context = new SparkContext("local[*]","Movie ratings counter")
     
-    // Load data into RDD (userID, movieID, ratings, timestamp)
+    // Load data (userID, movieID, ratings, timestamp)
     val lines = context.textFile("../data/UserMovieRatings.data")
     
     // Take only required field(ratings) from data.
